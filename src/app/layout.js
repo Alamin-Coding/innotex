@@ -1,9 +1,11 @@
+import localFont from 'next/font/local'
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
+import MainNavigation from '@/components/Header/MainNavigation';
 
 const notosans = Noto_Sans({ subsets: ["latin"] });
+const proxima = localFont({ src: '../../public/fonts/Proxima Nova Regular.otf' })
 
 export const metadata = {
   title: "innotex",
@@ -13,8 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={notosans.className}>
-        {/* <Header></Header> */}
+      <body className={proxima.className}>
+        {/* <MainNavigation /> */}
         {children}
         <Footer />
       </body>
