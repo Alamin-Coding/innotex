@@ -4,14 +4,12 @@ import { useState } from "react"
 
 const Header = () => {
     
-const uri = encodeURI("https://example.com?a=1&b=2");  // Encodes URI
-const decodedUri = decodeURI(uri);
-
-console.log(uri);
-console.log(decodedUri);
+// const uri = encodeURI("https://example.com?a=1&b=2");  // Encodes URI
+// const decodedUri = decodeURI(uri);
 
     const [language, setLanguage] = useState("English");
     const [toggle, setToggle] = useState(false);
+
     const handleToggle = () => {
         setToggle(state => state? false: true)
     }
