@@ -30,7 +30,7 @@ const LinkItem = ({text, link}) => {
 
 const FooterCard = () => {
   return (
-    <div className="relative rounded-xl h-[558px] flex items-end" style={bgImage}>
+    <div className="relative rounded-xl overflow-hidden h-[558px] flex items-end" style={bgImage}>
       <div className="w-full">
         <Image src={footerCardShape} alt="shape" className="w-full -mb-[1px]" />
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 bg-[#00556B] px-4 pt-4 pb-5 md:px-12 relative after:content[''] after:w-screen after:h-[200px] after:bg-footer-card-top after:absolute after:left-1/2 after:-translate-x-1/2 after:top-0 after:z-10 ">
@@ -51,7 +51,7 @@ const FooterCard = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-red-800 pt-20 overflow-hidden">
+    <footer className="bg-white pt-20 overflow-hidden">
       <div className="container -mb-[263px] lg:-mb-[426px]">
         <FooterCard />
       </div>

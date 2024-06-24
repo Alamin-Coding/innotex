@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={proxima.className}>
+      <body className={`${proxima.className} light`}>
         {/* <MainNavigation /> */}
         {children}
         <Footer />

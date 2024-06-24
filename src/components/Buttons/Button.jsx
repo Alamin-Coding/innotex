@@ -13,4 +13,12 @@ const Button = ({text, ButtonElement=Link, primary=true, ...props}) => {
   )
 }
 
+export const ButtonOutline = ({text, ButtonElement=Link, ...props}) => {
+  return (
+    <ButtonElement style={shadow} {...props} className="rounded-md uppercase px-6 py-[14px] block duration-200 sm:inline-block text-center bg-transparent text-primary border border-primary hover:bg-primary hover:text-white">
+     {text}
+    </ButtonElement>
+  )
+}
+
 export default Button

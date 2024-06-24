@@ -28,8 +28,28 @@ module.exports = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        primary_text: {
+          DEFAULT: "hsl(var(--primary-text))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        secondary_text: {
+          DEFAULT: "hsl(var(--secondary-text))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        rapidink: {
+          DEFAULT: "hsl(var(--rapidink))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        promo_digital: {
+          DEFAULT: "hsl(var(--promo-digital))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        premium_digital: {
+          DEFAULT: "hsl(var(--premium-digital))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {

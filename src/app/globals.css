@@ -13,10 +13,25 @@
       --popover: 0 0% 100%;
       --popover-foreground: 222.2 84% 4.9%;
 
-      --primary: 222.2 47.4% 11.2%;
+      --primary: 192, 100%, 40%;
       --primary-foreground: 210 40% 98%;
 
-      --secondary: 210 40% 96.1%;
+      --primary-text: 193, 100%, 10%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 194, 17%, 40%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary-text: 194, 17%, 40%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --rapidink: 321, 31%, 51%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --promo-digital: 188, 32%, 44%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --premium-digital: 200, 40%, 24%;
       --secondary-foreground: 222.2 47.4% 11.2%;
 
       --muted: 210 40% 96.1%;
@@ -72,5 +87,11 @@
     }
     body {
       @apply bg-background text-foreground;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      @apply text-primary_text font-semibold;
+    }
+    p {
+      @apply text-base text-secondary_text leading-normal font-normal; 
     }
   }

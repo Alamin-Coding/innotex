@@ -1,10 +1,10 @@
+import Hero from "@/components/Hero/Hero";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <main>
-      <div className="container py-20">
-        <h1>Home Page</h1>
-      </div>
+      <Hero/>
     </main>
   );
 }
