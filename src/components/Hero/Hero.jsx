@@ -5,6 +5,7 @@ import heroImage from "@/assets/images/hero1.png"
 import heroBg from "@/assets/images/Hero-bg.jpg"
 import Button, { ButtonOutline } from '../Buttons/Button'
 import { brush, print } from '@/icons/icon.js'
+import Animation from '../Animation/Animation'
 
 
 const heroBgImage = {
@@ -24,7 +25,10 @@ const Hero = () => {
     <section style={heroBgImage} className='bg-no-repeat bg-cover bg-center pt-[110px] overflow-hidden'>
         <div className="container">
             <div className='grid grid-cols-1 gap-[56px] items-center lg:grid-cols-2'>
-                <div className='max-w-[569px] sm:mx-auto lg:mt-[65px]'>
+                <div className='max-w-[569px] sm:mx-auto lg:mt-[65px] relative'>
+                    <Animation className="bg-[#3ED0A1] animate-pulse-blue absolute -top-4 -left-4 hidden md:block" />
+                    <Animation className="bg-[#FF5670] animate-pulse-red absolute top-[30%] right-0 hidden md:block" />
+                    <Animation className="bg-[#46C9EE] animate-pulse-sky absolute -left-[57px] -bottom-[46px] hidden md:block" />
                     <h1 className='text-[32px] leading-tight sm:text-5xl sm:leading-tight lg:text-[56px] lg:leading-[64px]'>Join The <span className='text-primary md:text-primary_text'>Printing</span> Revolution</h1>
                     <div className='flex items-center justify-center w-[122px] h-[40px] rounded-full overflow-hidden md:w-[206px] md:h-[67px]'>
                         <Image src={gradient} alt='gradient image' className='object-cover w-full h-full' />

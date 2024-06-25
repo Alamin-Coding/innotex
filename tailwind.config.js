@@ -9,10 +9,19 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1440px',
+    },
     container: {
       center: true,
       padding: "1rem",
       screens: {
+        "lg": "1056px",
+        "xl": "1210px",
         "2xl": "1210px",
       },
     },
@@ -87,10 +96,28 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "pulse-red": {
+          "0%": { transform: "scale(0.8)",boxShadow: "0 0 0 0 #FF5670" },
+          "70%": { transform: "scale(1)",boxShadow: "0 0 0 8px rgba(255, 86, 111, 0.2)" },
+          "100%": { transform: "scale(0.8)" }
+        },
+        "pulse-blue": {
+          "0%": { transform: "scale(0.8)",boxShadow: "0 0 0 0 #3ED0A1" },
+          "70%": { transform: "scale(1)",boxShadow: "0 0 0 8px rgba(62, 208, 162, 0.2)" },
+          "100%": { transform: "scale(0.8)" }
+        },
+        "pulse-sky": {
+          "0%": { transform: "scale(0.8)",boxShadow: "0 0 0 0 #46C9EE" },
+          "70%": { transform: "scale(1)",boxShadow: "0 0 0 8px rgba(70, 202, 238, 0.2)" },
+          "100%": { transform: "scale(0.8)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-red": "pulse-red 2s infinite",
+        "pulse-blue": "pulse-blue 3s infinite",
+        "pulse-sky": "pulse-sky 4s infinite",
       },
       backgroundImage: {
         // 'footer-card-top': "url('https://images.pexels.com/photos/16848795/pexels-photo-16848795/free-photo-of-relaxation-in-luxembourg-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load')",
