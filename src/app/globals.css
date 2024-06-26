@@ -95,3 +95,11 @@
       @apply text-base text-secondary_text leading-normal font-normal; 
     }
   }
+
+  .absolute.left-0.top-full.flex.justify-center {
+    width: calc(100% - 62px);
+    left: 31px;
+  }
+  div[data-orientation="horizontal"] {
+    width: 100% !important;
+  }

@@ -4,5 +4,6 @@ import latest from "@/assets/images/latest-technology.svg"
 import different from "@/assets/images/different-countries.svg"
 import eco from "@/assets/images/eco.svg"
 import production from "@/assets/images/production.svg"
+import megaMenuIcon from "@/assets/images/mega-menu-icon.svg"
 
-export {brush, print, latest, different, eco, production }
+export {brush, print, latest, different, eco, production, megaMenuIcon }

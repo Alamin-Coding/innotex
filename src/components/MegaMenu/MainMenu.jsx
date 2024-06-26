@@ -14,6 +14,196 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logoText from "@/assets/images/logo-text.png"
 import logoMark from "@/assets/images/logomark.png"
+import { megaMenuIcon } from '@/icons/icon';
+
+// Generate Uniq ID
+import { v4 as uuidv4 } from 'uuid';
+
+
+
+
+const heatTransferMenuData = [
+  {
+    id: uuidv4(),
+    subLinkTitle: "Textile Transfers", 
+    subLinkDesc: "2-line description about this menu item to give context", 
+    subitems: [
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+    ]
+  },
+  {
+    id: uuidv4(),
+    subLinkTitle: "Textile Transfers", 
+    subLinkDesc: "2-line description about this menu item to give context", 
+    subitems: [
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+    ]
+  },
+  {
+    id: uuidv4(),
+    subLinkTitle: "Textile Transfers", 
+    subLinkDesc: "2-line description about this menu item to give context", 
+    subitems: [
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+      {
+        id: uuidv4(),
+        icon: megaMenuIcon,
+        title: "RapidInk Transfers",
+        desc: "1-line description"
+      },
+    ]
+  },
+]
+
+
+const MegaMenuIcon = ({icon, title, desc}) => {
+  return (
+    <div className='grid items-center grid-cols-[28px_1fr] gap-4'>
+      <div>
+        <Image src={icon} alt='icon' />
+      </div>
+      <div>
+        <p className='font-semibold text-base text-primary_text leading-5 mb-[6px]'>{title}</p>
+        <p className='font-normal text-sm text-secondary_text leading-4'>{desc}</p>
+      </div>
+    </div>
+  )
+}
   
 
 const MainMenu = () => {
@@ -54,12 +244,27 @@ const MainMenu = () => {
                         <NavigationMenuList>
                             <NavigationMenuItem className='hover:bg-transparent'>
                                 <NavigationMenuTrigger className="hover:text-primary text-secondary_text text-base leading-normal font-medium rounded-none">Heat Transfer</NavigationMenuTrigger>
-                                    <NavigationMenuContent className="bg-[#F0F3F8] rounded-lg p-2">
-                                        <div className="bg-white rounded grid grid-cols-2 gap-4 md:w-[744px] lg:w-[1200px] xl:w-[1256px] 2xl:w-[]">
-                                            <NavigationMenuLink href="#" className="hover:bg-gray-100 p-2 rounded-md">Service 1</NavigationMenuLink>
-                                            <NavigationMenuLink href="#" className="hover:bg-gray-100 p-2 rounded-md">Service 2</NavigationMenuLink>
-                                            <NavigationMenuLink href="#" className="hover:bg-gray-100 p-2 rounded-md">Service 3</NavigationMenuLink>
-                                            <NavigationMenuLink href="#" className="hover:bg-gray-100 p-2 rounded-md">Service 4</NavigationMenuLink>
+                                    <NavigationMenuContent className="bg-[#F0F3F8] rounded-lg p-2 w-full">
+                                        <div className="rounded w-full ">
+                                        {heatTransferMenuData?.map( (item) => {
+                                              return (
+                                                <div className='grid grid-cols-[276px_1fr] gap-4' key={item.id}>
+                                                  <div className='bg-white p-4 relative after:content-[""]'>
+                                                    <h4>{item.subLinkTitle}</h4>
+                                                    <p>{item.subLinkDesc}</p>
+                                                  </div>
+                                                  <div className='relative'>
+                                                    <div className='grid grid-cols-2 gap-10 p-6 bg-white absolute w-full'>
+                                                      {item.subitems?.map( (subItem) => (
+                                                        <NavigationMenuLink key={subItem.id}>
+                                                          <MegaMenuIcon key={subItem.id} icon={subItem.icon} title={subItem.title} desc={subItem.desc} />
+                                                        </NavigationMenuLink>
+                                                      ) )}
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              )
+                                            } )}
                                         </div>
                                     </NavigationMenuContent>
                             </NavigationMenuItem>
