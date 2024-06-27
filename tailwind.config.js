@@ -119,10 +119,6 @@ module.exports = {
         "pulse-blue": "pulse-blue 3s infinite",
         "pulse-sky": "pulse-sky 4s infinite",
       },
-      backgroundImage: {
-        // 'footer-card-top': "url('https://images.pexels.com/photos/16848795/pexels-photo-16848795/free-photo-of-relaxation-in-luxembourg-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load')",
-        'footer-card-top': "url('/src/assets/images/footer-card-shape.svg')",
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],
