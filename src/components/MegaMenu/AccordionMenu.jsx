@@ -1,50 +1,54 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const NestedAccordionItem = ({ title, children }) => (
-  <AccordionItem>
-    <AccordionTrigger>{title}</AccordionTrigger>
-    <AccordionContent>{children}</AccordionContent>
-  </AccordionItem>
-);
+// const NestedAccordionItem = ({ title, children }) => (
+//   <AccordionItem>
+//     <AccordionTrigger>{title}</AccordionTrigger>
+//     <AccordionContent>{children}</AccordionContent>
+//   </AccordionItem>
+// );
 
 const MultiLayerAccordion = () => {
   return (
     <div className="max-w-lg mx-auto mt-10">
-      <Accordion>
-        <NestedAccordionItem title="Level 1 - Item 1">
-          <Accordion>
-            <NestedAccordionItem title="Level 2 - Item 1.1">
-              <Accordion>
-                <NestedAccordionItem title="Level 3 - Item 1.1.1">
-                  <p>Content for Level 3 - Item 1.1.1</p>
-                </NestedAccordionItem>
-                <NestedAccordionItem title="Level 3 - Item 1.1.2">
-                  <p>Content for Level 3 - Item 1.1.2</p>
-                </NestedAccordionItem>
-              </Accordion>
-            </NestedAccordionItem>
-            <NestedAccordionItem title="Level 2 - Item 1.2">
-              <p>Content for Level 2 - Item 1.2</p>
-            </NestedAccordionItem>
-          </Accordion>
-        </NestedAccordionItem>
-        <NestedAccordionItem title="Level 1 - Item 2">
-          <Accordion>
-            <NestedAccordionItem title="Level 2 - Item 2.1">
-              <p>Content for Level 2 - Item 2.1</p>
-            </NestedAccordionItem>
-            <NestedAccordionItem title="Level 2 - Item 2.2">
-              <Accordion>
-                <NestedAccordionItem title="Level 3 - Item 2.2.1">
-                  <p>Content for Level 3 - Item 2.2.1</p>
-                </NestedAccordionItem>
-                <NestedAccordionItem title="Level 3 - Item 2.2.2">
-                  <p>Content for Level 3 - Item 2.2.2</p>
-                </NestedAccordionItem>
-              </Accordion>
-            </NestedAccordionItem>
-          </Accordion>
-        </NestedAccordionItem>
+      <Accordion type="multiple" collapsible>
+        <AccordionItem value="item-1" className="border-b-0">
+          <AccordionTrigger className="hover:no-underline hover:text-primary">Heat Transfer</AccordionTrigger>
+          <AccordionContent>
+            <AccordionItem value="sitem-1">
+              <AccordionTrigger className="hover:no-underline hover:text-primary">Textile Transfers</AccordionTrigger>
+              <AccordionContent>RapidInk Transfers</AccordionContent>
+              <AccordionContent>EcoResist Transfers</AccordionContent>
+              <AccordionContent>Metallic & Reflective Transfers</AccordionContent>
+              <AccordionContent>Digital Transfers</AccordionContent>
+              <AccordionContent>Subliblock Transfers</AccordionContent>
+              <AccordionContent>3D Transfers</AccordionContent>
+              <AccordionContent>Neck Labels</AccordionContent>
+              <AccordionContent>Sports Patches & Badges</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="sitem-2">
+              <AccordionTrigger className="hover:no-underline hover:text-primary">Textile Transfers</AccordionTrigger>
+              <AccordionContent>RapidInk Transfers</AccordionContent>
+              <AccordionContent>EcoResist Transfers</AccordionContent>
+              <AccordionContent>Metallic & Reflective Transfers</AccordionContent>
+              <AccordionContent>Digital Transfers</AccordionContent>
+              <AccordionContent>Subliblock Transfers</AccordionContent>
+              <AccordionContent>3D Transfers</AccordionContent>
+              <AccordionContent>Neck Labels</AccordionContent>
+              <AccordionContent>Sports Patches & Badges</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="sitem-3">
+              <AccordionTrigger className="hover:no-underline hover:text-primary">Textile Transfers</AccordionTrigger>
+              <AccordionContent>RapidInk Transfers</AccordionContent>
+              <AccordionContent>EcoResist Transfers</AccordionContent>
+              <AccordionContent>Metallic & Reflective Transfers</AccordionContent>
+              <AccordionContent>Digital Transfers</AccordionContent>
+              <AccordionContent>Subliblock Transfers</AccordionContent>
+              <AccordionContent>3D Transfers</AccordionContent>
+              <AccordionContent>Neck Labels</AccordionContent>
+              <AccordionContent>Sports Patches & Badges</AccordionContent>
+            </AccordionItem>
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
     </div>
   );
