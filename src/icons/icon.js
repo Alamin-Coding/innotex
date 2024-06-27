@@ -8,5 +8,7 @@ import megaMenuIcon from "@/assets/images/mega-menu-icon.svg"
 import bars from "@/assets/images/bars.svg"
 import xmark from "@/assets/images/xmark.svg"
 import chevronDown from "@/assets/images/chevron.svg"
+import circleIcon from "@/assets/images/circle-icon.svg"
+import longArrow from "@/assets/images/long-arrow.svg"
 
-export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown }
+export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown, circleIcon, longArrow }

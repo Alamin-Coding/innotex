@@ -1,11 +1,13 @@
 import vector from "@/assets/images/heading-vector.svg";
 import Image from "next/image";
+import Button from "../Buttons/Button";
 
-export const HeadingDescription = ({heading, description }) => {
+export const HeadingDescription = ({heading, description, children }) => {
     return (
       <div>
-          <h2 className="text-xl leading-8">{heading}</h2>
+          <h2 className="text-xl leading-8 pb-6 lg:text-[40px] lg:leading-[48px]">{heading}</h2>
           <p className="text-base leading-normal">{description}</p>
+          {children}
       </div>
     )
   }
