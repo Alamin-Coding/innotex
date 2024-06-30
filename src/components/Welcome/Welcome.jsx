@@ -15,7 +15,6 @@ const options = {
   perPage: 3.3,
   perMove: 1,
   pagination: false,
-//   autoplay:"play",
   breakpoints: {
     600: {
       perPage: 1.3,

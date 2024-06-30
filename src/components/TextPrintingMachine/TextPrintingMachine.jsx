@@ -14,7 +14,7 @@ const TextPrintingMachine = () => {
         <SectionHeading subheading={"Printing"} heading={"Textile Printing Machine"} description={"Our strengths and Advantage discover what makes Us the most reliable and effective partner for your business."} />
 
         <div className="grid grid-cols-1 gap-6 mt-10 md:gap-[58px]">
-            <div>
+            <div className="rounded-[12px] overflow-hidden innot_img_zoom">
                 <Image src={printing_machine} alt="a man working" />
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -35,7 +35,7 @@ const TextPrintingMachine = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 mt-10 md:gap-[58px]">
-            <div>
+            <div className="rounded-[12px] overflow-hidden innot_img_zoom">
                 <Image src={mk2} alt="a man working" />
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

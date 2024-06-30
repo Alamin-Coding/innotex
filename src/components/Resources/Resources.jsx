@@ -20,11 +20,16 @@ const options = {
     arrows: true,
     padding: { left: '7rem', right: '7rem' },
     perPage: 3,
-    perMove: 1,
+    perMove: 2,
     pagination: false,
-    
-  //   autoplay:"play",
-//   padding: "80px",
+    autoplay: true,
+    interval   : 5000,
+    speed      : 3000,
+    drag   : 'free',
+    autoScroll : {
+        speed: 1,
+        snap: true,
+    },
     breakpoints: {
       600: {
         perPage: 1,
@@ -79,18 +84,6 @@ const Resources = () => {
             <SectionHeading subheading={"Resources"} heading={"Blogs about Innotex"} shortText={false} />
         </div>
         <div>
-        {/* <Splide 
-            aria-label="resources"
-            options={options}
-        >
-            
-          {slideData?.map( (slide_data) => (
-              <SplideSlide key={slide_data.id} className="py-3">
-                  <BlogCard  cardData={slide_data} />
-              </SplideSlide>
-          ) )} 
-
-        </Splide> */}
         <Splide hasTrack={ false } aria-label="resources" options={options}>
           <SplideTrack>
             {slideData?.map( (slide_data) => (
