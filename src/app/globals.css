@@ -103,3 +103,10 @@
   div[data-orientation="horizontal"] {
     width: 100% !important;
   }
+
+@media (min-width: 1170px) {
+  .container {
+    /*max-width: 1210px;*/
+    max-width: 1170px;
+  }
+}

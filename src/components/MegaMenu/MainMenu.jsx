@@ -418,8 +418,20 @@ const MainMenu = () => {
                       >
                       Blog
                     </Link>
+                    <Link
+                        href="/about"
+                        className="text-secondary_text hover:text-primary leading-normal font-medium"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                        href="/contact"
+                        className="text-secondary_text hover:text-primary leading-normal font-medium"
+                    >
+                      Contact Us
+                    </Link>
               </div>
-              <div className="hidden lg:block">
+              <div className="hidden lg:block text-secondary_text">
                 <SelectOption/>
               </div>
             </div>
