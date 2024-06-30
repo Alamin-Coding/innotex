@@ -319,7 +319,7 @@ const MainMenu = () => {
                     />
                 </Link>
               </div>
-              <div className="-mr-2 flex md:hidden">
+              <div className="-mr-2 flex lg:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   className="py-2 px-1 cursor-pointer"
@@ -328,99 +328,99 @@ const MainMenu = () => {
                   <Image src={bars} alt="menu" />
                 </button>
               </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-8">
-                  <Link
-                    href="/"
-                    className="text-primary leading-normal font-medium"
-                    >
-                    Home
-                  </Link>
-                  <NavigationMenu className="static">
-                    <NavigationMenuList>
-                      <NavigationMenuItem className="hover:bg-transparent">
-                        <NavigationMenuTrigger className="hover:text-primary focus:bg-transparent focus:text-primary hover:bg-transparent text-secondary_text text-base leading-normal font-medium rounded-none">
-                          Heat Transfer
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className="bg-[#F0F3F8] rounded-lg p-2 w-full">
-                          <div className="rounded w-full ">
-                            <div className="grid grid-cols-[276px_1fr] gap-[9px]">
-                              <div>
-                                {menu?.map((item, index) => {
-                                  return (
-                                    <div className="grid grid-cols-[276px_1fr] gap-[9px] cursor-pointer" key={item.id} >
-                                      <div className={`p-4 relative ${ item.active ? afterStyle :null} `} onClick={() => handleToggleActive(index)} >
-                                        <h4>{item.subLinkTitle}</h4>
-                                        <p>{item.subLinkDesc}</p>
+              <div className="hidden lg:flex items-baseline justify-center space-x-8">
+                    <Link
+                      href="/"
+                      className="text-primary leading-normal font-medium"
+                      >
+                      Home
+                    </Link>
+                    <NavigationMenu className="static">
+                      <NavigationMenuList>
+                        <NavigationMenuItem className="hover:bg-transparent">
+                          <NavigationMenuTrigger className="hover:text-primary focus:bg-transparent focus:text-primary hover:bg-transparent text-secondary_text text-base leading-normal font-medium rounded-none">
+                            Heat Transfer
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent className="bg-[#F0F3F8] rounded-lg p-2 w-full">
+                            <div className="rounded w-full ">
+                              <div className="grid grid-cols-[276px_1fr] gap-[9px]">
+                                <div>
+                                  {menu?.map((item, index) => {
+                                    return (
+                                      <div className="grid grid-cols-[276px_1fr] gap-[9px] cursor-pointer" key={item.id} >
+                                        <div className={`p-4 relative ${ item.active ? afterStyle :null} `} onClick={() => handleToggleActive(index)} >
+                                          <h4>{item.subLinkTitle}</h4>
+                                          <p>{item.subLinkDesc}</p>
+                                        </div>
                                       </div>
+                                    );
+                                  })}
+                                </div>
+                                <div>
+                                {menu.map((item) => {
+                                  return (
+                                    item.active &&
+                                    <div key={item.id} className="h-full grid grid-cols-2 content-baseline gap-10 p-6 bg-white rounded-sm">
+                                      {item.subitems?.map((subItem) => (
+                                        <NavigationMenuLink key={subItem.id}>
+                                          <MegaMenuIcon
+                                            key={subItem.id}
+                                            link={subItem.link}
+                                            icon={subItem.icon}
+                                            title={subItem.title}
+                                            desc={subItem.desc}
+                                            />
+                                        </NavigationMenuLink>
+                                      ))}
                                     </div>
-                                  );
-                                })}
-                              </div>
-                              <div>
-                              {menu.map((item) => {
-                                return (
-                                  item.active &&
-                                  <div key={item.id} className="h-full grid grid-cols-2 content-baseline gap-10 p-6 bg-white rounded-sm">
-                                    {item.subitems?.map((subItem) => (
-                                      <NavigationMenuLink key={subItem.id}>
-                                        <MegaMenuIcon
-                                          key={subItem.id}
-                                          link={subItem.link}
-                                          icon={subItem.icon}
-                                          title={subItem.title}
-                                          desc={subItem.desc}
-                                          />
-                                      </NavigationMenuLink>
-                                    ))}
-                                  </div>
-                                )
-                              } )} 
+                                  )
+                                } )} 
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                    </NavigationMenuList>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                      </NavigationMenuList>
 
-                    <NavigationMenuList className="relative">
-                      <NavigationMenuItem className="hover:bg-transparent">
-                        <NavigationMenuTrigger className="hover:text-primary focus:bg-transparent focus:text-primary hover:bg-transparent text-secondary_text text-base leading-normal font-medium rounded-none">
-                          Heat Presses
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className="bg-[#F0F3F8] rounded-md p-2 w-[516px]" style={shadow}>
-                          <div className="rounded w-[516px]">
-                            <div className="h-full grid grid-cols-2 content-baseline gap-10 p-6 bg-white rounded-sm">
-                            {heatPresses.map( item => (
-                                <NavigationMenuLink key={item.id}>
-                                    <MegaMenuIcon
-                                      link={item.link}
-                                      icon={item.icon}
-                                      title={item.title}
-                                      desc={item.desc}
-                                      />
-                                  </NavigationMenuLink>
-                            ))} 
+                      <NavigationMenuList className="relative">
+                        <NavigationMenuItem className="hover:bg-transparent">
+                          <NavigationMenuTrigger className="hover:text-primary focus:bg-transparent focus:text-primary hover:bg-transparent text-secondary_text text-base leading-normal font-medium rounded-none">
+                            Heat Presses
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent className="bg-[#F0F3F8] rounded-md p-2 w-[516px]" style={shadow}>
+                            <div className="rounded w-[516px]">
+                              <div className="h-full grid grid-cols-2 content-baseline gap-10 p-6 bg-white rounded-sm">
+                              {heatPresses.map( item => (
+                                  <NavigationMenuLink key={item.id}>
+                                      <MegaMenuIcon
+                                        link={item.link}
+                                        icon={item.icon}
+                                        title={item.title}
+                                        desc={item.desc}
+                                        />
+                                    </NavigationMenuLink>
+                              ))} 
+                              </div>
                             </div>
-                          </div>
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                    </NavigationMenuList>
-                  </NavigationMenu>
-                  <Link
-                    href="/watch"
-                    className="text-secondary_text hover:text-primary leading-normal font-medium"
-                    >
-                    Watch
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="text-secondary_text hover:text-primary leading-normal font-medium"
-                    >
-                    Blog
-                  </Link>
-                  <SelectOption/>
-                </div>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                      </NavigationMenuList>
+                    </NavigationMenu>
+                    <Link
+                      href="/watch"
+                      className="text-secondary_text hover:text-primary leading-normal font-medium"
+                      >
+                      Watch
+                    </Link>
+                    <Link
+                      href="/blog"
+                      className="text-secondary_text hover:text-primary leading-normal font-medium"
+                      >
+                      Blog
+                    </Link>
+              </div>
+              <div className="hidden lg:block">
+                <SelectOption/>
               </div>
             </div>
           </div>

@@ -10,5 +10,7 @@ import xmark from "@/assets/images/xmark.svg"
 import chevronDown from "@/assets/images/chevron.svg"
 import circleIcon from "@/assets/images/circle-icon.svg"
 import longArrow from "@/assets/images/long-arrow.svg"
+import leftArrow from "@/assets/images/arrow-left.svg"
+import rightArrow from "@/assets/images/arrow-right.svg"
 
-export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown, circleIcon, longArrow }
+export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown, circleIcon, longArrow, leftArrow, rightArrow }
