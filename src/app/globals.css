@@ -127,6 +127,11 @@
   padding-top: 100px;
   padding-bottom: 130px;
 }
+.contactform_wrap{
+  @apply shadow;
+  border: 1px solid #EEF9FC;
+}
+
 @media (min-width: 1170px) {
   .container {
     /*max-width: 1210px;*/

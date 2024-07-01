@@ -2,16 +2,19 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 
 import Section from "../Section/Section";
 import Link from "next/link";
-import { Label} from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
 
 import contactBg from "@/assets/images/contact-bg.png"
+import Image from "next/image";
+import {mailIcon} from "@/icons/icon";
 
 const contactBgImage = {
-    background: `url(${contactBg.src})`
+    backgroundImage: `url(${contactBg.src})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
 }
-
 
 
 const Contact = () => {
@@ -29,40 +32,72 @@ const Contact = () => {
             </div>
 
             {/* Only Desktop view */}
-            <div className="hidden lg:block mt-[60px] ">
+            <div className="mt-[60px]">
                 <div className="grid grid-cols-12 gap-8">
-                    <div className="col-span-5">
+                    <div className="col-span-5" style={contactBgImage}>
                         <div className="border border-[#00A3CA] rounded-xl p-6">
-                            <h3 className="text-3xl">Get in touch</h3>
-                            <div className=" text-xl">
-                                <p>Feel free to ask any questions or request information; I&apos;m here to assist you.</p>
+                            <div>
+                                <h3 className="text-3xl">Get in touch</h3>
+                                <div className=" text-xl">
+                                    <p>Feel free to ask any questions or request information; I&apos;m here to assist
+                                        you.</p>
+                                </div>
+                            </div>
+                            <div className="border-b border-[#00A3CC] my-8"></div>
+                            <div className="flex flex-col gap-y-6">
+                                <div className="flex gap-6">
+                                    <div
+                                        className=" flex align-center justify-center bg-[#00A3CA] w-12 h-12 rounded-full">
+                                        <Image width={26} height={21} src={mailIcon} alt="mail"/>
+                                    </div>
+                                    <div>
+                                        <h4>Mail</h4>
+                                        <p>info@innotex.com</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <div
+                                        className=" flex align-center justify-center bg-[#00A3CA] w-12 h-12 rounded-full">
+                                        <Image width={26} height={21} src={mailIcon} alt="mail"/>
+                                    </div>
+                                    <div>
+                                        <h4>Call</h4>
+                                        <p>123456789</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-span-7">
-
-                    </div>
-                </div>
-            </div>
-
-            <div className="py-20" style={contactBgImage}>
-                <div className="rounded-xl bg-white p-5">
-                    <div className="grid grid-cols-1 gap-6">
-                        <div className="grid w-full max-w-sm items-center gap-1.5">
-                            <Label htmlFor="name">Name*</Label>
-                            <Input type="text" id="name" placeholder="Enter your name" />
-                        </div>
-                        <div className="grid w-full max-w-sm items-center gap-1.5">
-                            <Label htmlFor="email">Email*</Label>
-                            <Input type="email" id="email" placeholder="Enter your email" />
-                        </div>
-                        <div className="grid w-full max-w-sm items-center gap-1.5">
-                            <Label htmlFor="email">Email*</Label>
-                            <Input type="email" id="email" placeholder="Enter your email" />
-                        </div>
-                        <div className="grid w-full max-w-sm items-center gap-1.5">
-                            <Label htmlFor="email">Email*</Label>
-                            <Input type="email" id="email" placeholder="Enter your email" />
+                        <div>
+                            <div className="rounded-xl bg-white p-[30px] contactform_wrap">
+                                <div className="contactform flex flex-col gap-6">
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="grid w-full items-center">
+                                            <Label htmlFor="name">Name*</Label>
+                                            <Input className="h-[60px] rounded-lg" type="text" id="name" placeholder="Enter your name"/>
+                                        </div>
+                                        <div className="grid w-full items-center">
+                                            <Label htmlFor="email">Email*</Label>
+                                            <Input className="h-[60px] rounded-lg" type="email" id="email" placeholder="Enter your email"/>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="grid w-ful items-center">
+                                            <Label htmlFor="email">Country *</Label>
+                                            <Input className="h-[60px] rounded-lg" type="email" id="email" placeholder="Enter your email"/>
+                                        </div>
+                                        <div className="grid w-full items-center">
+                                            <Label htmlFor="email">Organization Type</Label>
+                                            <Input className="h-[60px] rounded-lg" type="email" id="email" placeholder="Enter your email"/>
+                                        </div>
+                                    </div>
+                                    <div className="grid w-full items-center">
+                                        <Label htmlFor="email">How can we help?</Label>
+                                        <Textarea className="rounded-lg" placeholder="Enter your email"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

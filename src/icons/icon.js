@@ -12,5 +12,6 @@ import circleIcon from "@/assets/images/circle-icon.svg"
 import longArrow from "@/assets/images/long-arrow.svg"
 import leftArrow from "@/assets/images/arrow-left.svg"
 import rightArrow from "@/assets/images/arrow-right.svg"
+import mailIcon from "@/assets/images/icons/mail.svg"
 
-export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown, circleIcon, longArrow, leftArrow, rightArrow }
+export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown, circleIcon, longArrow, leftArrow, rightArrow, mailIcon }
