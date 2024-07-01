@@ -10,22 +10,29 @@ import { ButtonOutline } from "../Buttons/Button"
 import ViewAll from "../Buttons/ViewAll"
 
 import { rapidInkTransfers, metallicAndReflectiveTransfers } from "@/data/data.js";
+import circleGradient from "@/assets/images/circle-gradient.png"
 
 const Products = () => {
   return (
-    <Section>
+    <Section className="overflow-x-hidden">
+        {/* heading */}
         <div className="relative flex items-center justify-between pb-[60px]">
             <SectionHeading subheading="Products" heading="Our Transfers" shortText={false} />
             <ViewAll/>
         </div>
+        {/* RapidInk Transfers */}
         <div className="grid grid-cols-1 gap-[72px] items-center md:grid-cols-2">
-            <div className="rounded-xl relative">
+            <div className="rounded-xl relative z-[1]">
                 <Image className="rounded-xl w-full object-cover" src={product_1} alt="image" />
                 <ul className="hidden md:block p-6 bg-white rounded-xl shadow-[0_4px_30px_rgba(0,0,0,0.12)] w-[335px] -translate-x-[20%] translate-y-[25%] absolute bottom-0 left-0">
                     {rapidInkTransfers?.map(data => (
                         <ListWithIcon key={data.id} text={data.listText} />
                     ))}
                 </ul>
+                {/* background circle shape */}
+                <div className="absolute -translate-x-1/2 z-[-1] -left-[20%] -bottom-[40%]">
+                    <Image src={circleGradient} alt="circle gradient color shape" className="w-full" />
+                </div>
             </div>
             <HeadingDescription heading="RapidInk Transfers" description="Our RapidInk custom heat transfers are the perfect way to reproduce vibrant multicolored logos and designs on a wide range of garments and fabric types.">
                 <div className="inline-flex flex-col gap-10 pt-6 md:pt-10">
@@ -39,6 +46,7 @@ const Products = () => {
             </HeadingDescription>
         </div>
 
+        {/* Metallic & Reflective Transfers */}
         <div className="grid grid-cols-1 gap-[72px] items-center md:grid-cols-2 mt-10 md:mt-[246px]">
             <HeadingDescription heading="Metallic & Reflective Transfers" description="Elevate your garment prints with our custom metallic and reflective heat transfers. Ideal for fashion, retail, and industrial workwear, especially for certified reflective materials.">
                 <div className="inline-flex flex-col gap-10 pt-6 md:pt-10">
@@ -57,6 +65,10 @@ const Products = () => {
                         <ListWithIcon key={data.id} text={data.listText} />
                     ))}
                 </ul>
+                {/* background circle shape */}
+                <div className="absolute translate-x-1/2 z-[-1] right-[5%] -bottom-[15%]">
+                    <Image src={circleGradient} alt="circle gradient color shape" className="w-full" />
+                </div>
             </div>
         </div>
     </Section>

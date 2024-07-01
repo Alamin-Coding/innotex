@@ -119,6 +119,9 @@ module.exports = {
         "pulse-blue": "pulse-blue 3s infinite",
         "pulse-sky": "pulse-sky 4s infinite",
       },
+      boxShadow: {
+        'card-shadow': '0 4px 60px 0 rgba(0, 0, 0, 0.05)',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

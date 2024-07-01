@@ -87,7 +87,7 @@ const Resources = () => {
         <Splide hasTrack={ false } aria-label="resources" options={options}>
           <SplideTrack>
             {slideData?.map( (slide_data) => (
-                <SplideSlide key={slide_data.id} className="py-3">
+                <SplideSlide key={slide_data.id} className="py-16">
                     <BlogCard  cardData={slide_data} />
                 </SplideSlide>
             ) )} 

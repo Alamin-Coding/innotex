@@ -5,7 +5,7 @@ const BlogCard = ({cardData}) => {
     const {img, title, desc} = cardData
     // let des = cardData.desc.slice(0, 94) + "..."
   return (
-    <div className='p-6 bg-white rounded-xl shadow-[0px_4px_60px_rgba(0,0,0,0,0.5)] border border-[rgba(181,182,185,0.05)]'>
+    <div className='p-6 bg-white rounded-xl border border-[rgba(181,182,185,0.10)] shadow shadow-card-shadow'>
         <div className='rounded-lg overflow-hidden innot_img_zoom'>
             <Image src={img} alt='image' />
         </div>
