@@ -19,6 +19,7 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
+import Button from "../Buttons/Button";
 
 const contactBgImage = {
     backgroundImage: `url(${contactBg.src})`,
@@ -44,7 +45,7 @@ const Contact = () => {
             {/* Only Desktop view */}
             <div className="mt-[60px]">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                    <div className="md:col-span-5 order-2 md:order-2" style={contactBgImage}>
+                    <div className="md:col-span-5 order-2 md:order-1" style={contactBgImage}>
                         <div className="border border-[#00A3CA]/30 rounded-xl p-6">
                             <div>
                                 <h3 className="text-3xl">Get in touch</h3>
@@ -78,9 +79,9 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:col-span-7 order-1 md:order-1">
-                        <div>
-                            <div className="rounded-xl bg-white p-[30px] contactform_wrap">
+                    <div className="md:col-span-7 order-1 md:order-2">
+                        <form>
+                            <div className="rounded-xl bg-white p-[30px] shadow-[0_4px_30px_#EEF8FB] contactform_wrap">
                                 <div className="contactform flex flex-col gap-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="grid w-full items-center">
@@ -122,16 +123,16 @@ const Contact = () => {
                                                     </SelectGroup>
                                                 </SelectContent>
                                             </Select>
-                                            {/* <Input className="h-[60px] rounded-lg" type="email" id="email" placeholder="Enter your email"/> */}
                                         </div>
                                     </div>
                                     <div className="grid w-full items-center">
                                         <Label htmlFor="massages">How can we help?</Label>
                                         <Textarea className="rounded-lg min-h-[140px]" placeholder="Type your massages"/>
                                     </div>
+                                    <div className="text-right"><Button ButtonElement={"button"} type="submit" text={"Submit"}/></div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

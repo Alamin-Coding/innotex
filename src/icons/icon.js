@@ -15,4 +15,5 @@ import rightArrow from "@/assets/images/arrow-right.svg"
 import mailIcon from "@/assets/images/icons/mail.svg"
 import locationIcon from "@/assets/images/icons/location.svg"
 
+
 export {brush, print, latest, different, eco, production, megaMenuIcon, bars, xmark, chevronDown, circleIcon, longArrow, leftArrow, rightArrow, mailIcon, locationIcon }

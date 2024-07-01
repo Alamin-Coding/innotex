@@ -20,7 +20,7 @@ const SectionHeading = ({subheading, heading, description, shortText=true }) => 
             <p className="text-primary text-base leading-normal md:text-xl md:leading-8">{subheading}</p>
             <h2 className="text-[24px] leading-[40px] lg:text-[42px] lg:leading-[56px]">{heading}</h2>
         </div>
-        { shortText && <p className="text-base leading-normal pt-4">{description}</p> }
+        { shortText && <p className="text-base leading-normal pt-4 lg:text-[20px] lg:leading-[32px]">{description}</p> }
     </div>
   )
 }

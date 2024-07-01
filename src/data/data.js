@@ -66,6 +66,73 @@ export const metallicAndReflectiveTransfers = [
     },
 ];
 
+
+export const transfers = [
+    {
+        id: uuidv4(),
+        listText: "Turnaround in 48 hours"
+    },
+    {
+        id: uuidv4(),
+        listText: "Fast application - only 4-6 seconds"
+    },
+    {
+        id: uuidv4(),
+        listText: "Suitable for all material types"
+    },
+    {
+        id: uuidv4(),
+        listText: "Application to light and dark coloured garments"
+    },
+    {
+        id: uuidv4(),
+        listText: "Withstand 100+ domestic washes"
+    },
+    {
+        id: uuidv4(),
+        listText: "Individually cut for easy application"
+    },
+    {
+        id: uuidv4(),
+        listText: "Pantone colour matching available"
+    },
+    {
+        id: uuidv4(),
+        listText: "Extremely soft matt finish"
+    }
+];
+
+export const textileMachine = [
+    {
+        id: uuidv4(),
+        listText: "Gloss and mirror metallic effects available"
+    },
+    {
+        id: uuidv4(),
+        listText: "Highly reflective materials"
+    },
+    {
+        id: uuidv4(),
+        listText: "EN ISO 20471 certification when required"
+    },
+    {
+        id: uuidv4(),
+        listText: "3D and high build finishes possible"
+    },
+    {
+        id: uuidv4(),
+        listText: "Fast turnaround time"
+    },
+    {
+        id: uuidv4(),
+        listText: "Individually cut for easy application"
+    },
+    {
+        id: uuidv4(),
+        listText: "Suitable for application to all kinds of fabrics"
+    },
+];
+
 export const innoPrinterMK1 = [
     {
         id: uuidv4(),

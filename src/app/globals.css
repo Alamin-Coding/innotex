@@ -135,7 +135,7 @@
   padding-bottom: 130px;
 }
 .contactform_wrap{
-  @apply shadow;
+  @apply shadow-[0_4px_30px_#EEF8FB];
   border: 1px solid #EEF9FC;
 }
 
